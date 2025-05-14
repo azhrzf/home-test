@@ -116,7 +116,13 @@
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
   }
+}
+
+.home-bg {
+  background: linear-gradient(0deg, rgba(37, 99, 235, 0.86) 0%, rgba(37, 99, 235, 0.86) 100%),
+    url(/assets/images/home-bg.jpg) lightgray 50% / cover no-repeat;
 }

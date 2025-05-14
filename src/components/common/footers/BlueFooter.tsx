@@ -1,9 +1,10 @@
-import Logo from "./logo";
+import WhiteLogo from "../logos/WhiteLogo";
 
-export default function Footer() {
+
+export default function BlueFooter() {
     return (
         <footer className="bg-blue-600/85 py-7 flex justify-center space-x-3 text-white">
-            <Logo />
+            <WhiteLogo />
             <p>&copy; {new Date().getFullYear()} genzet. All rights reserved.</p>
         </footer>
     );

@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Archivo } from "next/font/google";
 import "./globals.css";
-import Footer from "@/components/layouts/footer";
 
 const archivo = Archivo({
   variable: "--font-archivo",
@@ -22,12 +21,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${archivo.className} font-sans antialiased flex flex-col min-h-screen justify-between`}
+        className={`${archivo.className} font-sans antialiased`}
       >
-        <div>
-          {children}
-        </div>
-        <Footer />
+        {children}
       </body>
     </html>
   );
