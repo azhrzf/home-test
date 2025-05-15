@@ -1,9 +1,9 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import BlueLogo from "../logos/BlueLogo";
+import BlueLogo from "../logo/BlueLogo";
 import HeaderPorofile from "./header-profile";
-import WhiteLogo from "../logos/WhiteLogo";
+import WhiteLogo from "../logo/WhiteLogo";
 import clsx from "clsx";
 
 export default function TransparentHeader() {
@@ -33,11 +33,16 @@ export default function TransparentHeader() {
                 "fixed top-0 left-0 right-0 z-50 w-full border-b transition-all duration-300",
                 isScrolled
                     ? "bg-white border-slate-200"
-                    : "bg-transparent border-transparent"
+                    : "bg-white lg:bg-transparent border-transparent"
             )}
         >
-            <div className="max-w-7xl flex items-center justify-between mx-auto px-4 py-4">
-                {isScrolled ? <BlueLogo /> : <WhiteLogo />}
+            <div className="max-w-7xl flex items-center justify-between mx-auto px-5 py-4">
+                <div className="hidden lg:block">
+                    {isScrolled ? <BlueLogo /> : <WhiteLogo />}
+                </div>
+                <div className="block lg:hidden">
+                    <BlueLogo />
+                </div>
                 <HeaderPorofile textColor={isScrolled ? "slate-900" : "white"} />
             </div>
         </header>

@@ -9,7 +9,7 @@ import {
 export default function SelectInput() {
     return (
         <Select>
-            <SelectTrigger className="bg-white w-[180px] text-gray-900">
+            <SelectTrigger className="bg-white w-full text-gray-900">
                 <SelectValue placeholder="Select category" />
             </SelectTrigger>
             <SelectContent>
